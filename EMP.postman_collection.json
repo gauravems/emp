@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "9790a476-e1ce-4b09-8545-190dc28fe498",
+		"name": "EMP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36681191"
+	},
+	"item": [
+		{
+			"name": "add Event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"updatedAt\": \"Date\", // Timestamp when the event was last updated\r\n    \"id\": \"string\", // Unique identifier for the event\r\n    \"eventName\": \"string\", // Name of the event\r\n    \"eventDate\": \"Date\", // Date of the event\r\n    \"organizer\": \"string\", // Organizer's name\r\n    \"email\": \"string\", // Email of the organizer\r\n    \"phone\": \"string\", // Phone number of the organizer\r\n    \"location\": {\r\n        \"street\": \"string\", // Venue street address\r\n        \"city\": \"string\", // Venue city\r\n        \"state\": \"string\", // Venue state\r\n        \"zip\": \"string\" // Venue zip code\r\n    },\r\n    \"createdAt\": \"Date\" // Timestamp when the event \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update event",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/events/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"events",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete event",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/events/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"events",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get event by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/eventlist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"eventlist"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
